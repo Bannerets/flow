@@ -1,0 +1,19 @@
+opam-version: "2.0"
+name: "flow_parser"
+version: "0.96.1"
+synopsis: "Flow parser"
+description: "Flow parser"
+authors: ["Flow Team <flow@fb.com>"]
+maintainer: "Bannerets <comonoid@protonmail.com>"
+homepage: "https://github.com/Bannerets/flow/tree/master/src/parser"
+dev-repo: "git+https://github.com/Bannerets/flow.git"
+bug-reports: "https://github.com/Bannerets/flow/issues"
+license: "MIT"
+build: [["dune" "build" "-p" name "-j" jobs]]
+depends: [
+  "ocaml" {>= "4.03.0"}
+  "ppx_deriving" {build}
+  "ppx_gen_rec" {build}
+  "sedlex" {= "1.99.4"}
+  "wtf8"
+]

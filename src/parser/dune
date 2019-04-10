@@ -1,0 +1,8 @@
+(library
+  (name flow_parser)
+  (public_name flow_parser)
+  (libraries sedlex wtf8 ppx_deriving.show)
+  (modules (:standard \ flow_parser_js flow_parser_dot_js))
+  (preprocess (pps sedlex.ppx ppx_deriving.show ppx_gen_rec))
+  (flags (:standard -w -39))
+)
